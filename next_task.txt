@@ -1,0 +1,3 @@
+Switch to css modules
+
+create the css grid to fit the dashboard components
