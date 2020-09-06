@@ -1,14 +1,16 @@
 import React from 'react';
-import './Dashboard.css';
+import styles from './dashboard.module.css';
+
+import Info from './Info';
+import Graph from './Graph';
+import Pedistals from './Pedistals';
 
 export const Dashboard = () => {
   return (
-    <div>
-      <div className="container">
-        <div className="info">info</div>
-        <div className="graph">graph</div>
-        <div className="pedistals">pedistals</div>
-      </div>
+    <div className={styles.container}>
+      <Info />
+      <Graph />
+      <Pedistals />
     </div>
   );
 };

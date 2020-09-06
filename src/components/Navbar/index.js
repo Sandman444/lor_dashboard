@@ -6,24 +6,24 @@ import {
   faCircle,
   faClone
 } from '@fortawesome/free-regular-svg-icons';
-import './Navbar.css';
+import styles from './navbar.module.css';
 
 export const Navbar = () => {
   return (
-    <div className="nav">
+    <div className={styles.nav}>
       <ul>
         <li>
-          <Link className="link" to="/">
+          <Link className={styles.link} to="/">
             <FontAwesomeIcon size="2x" icon={faUserCircle} />
           </Link>
         </li>
         <li>
-          <Link className="link" to="/collector">
+          <Link className={styles.link} to="/collector">
             <FontAwesomeIcon size="2x" icon={faCircle} />
           </Link>
         </li>
         <li>
-          <Link className="link" to="/collector">
+          <Link className={styles.link} to="/collector">
             <FontAwesomeIcon size="2x" icon={faClone} />
           </Link>
         </li>
