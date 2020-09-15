@@ -1,3 +1,1 @@
-Switch to css modules
-
-create the css grid to fit the dashboard components
+Connect to Riot's LoR Data Dragon API
