@@ -3,23 +3,15 @@ import { Route, Link, Switch } from 'react-router-dom';
 //import { connect } from 'react-redux';
 
 import './App.css';
-import Navbar from './Navbar';
-import Dashboard from './Dashboard';
-import CardCollector from './CardCollector';
+import Dashboard from './dashboard/Dashboard';
 
 export class App extends Component {
   render() {
     return (
       <div className="container">
-        <div className="navbar">
-          <Navbar className="navbar" />
-        </div>
-        <div className="content">
-          <Switch>
-            <Route path="/" exact component={Dashboard} />
-            <Route path="/collector" exact component={CardCollector} />
-          </Switch>
-        </div>
+        <Switch>
+          <Route path="/" exact component={Dashboard} />
+        </Switch>
       </div>
     );
   }

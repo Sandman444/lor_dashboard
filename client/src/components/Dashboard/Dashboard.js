@@ -1,16 +1,16 @@
 import React from 'react';
 import styles from './dashboard.module.css';
 
-import Info from './Info';
+import Profile from './Profile';
 import Graph from './Graph';
-import Pedistals from './Pedistals';
+import PastGames from './PastGames';
 
 export const Dashboard = () => {
   return (
     <div className={styles.container}>
-      <Info />
+      <Profile />
       <Graph />
-      <Pedistals />
+      <PastGames />
     </div>
   );
 };

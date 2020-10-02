@@ -5,19 +5,19 @@
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
-    'info graph graph'
-    'info graph graph'
-    'pedistals pedistals pedistals';
+    'profile graph graph'
+    'profile graph graph'
+    'pastGames pastGames .';
 }
-.info {
-  grid-area: info;
+.profile {
+  grid-area: profile;
   background-color: lightblue;
 }
 .graph {
   grid-area: graph;
   background-color: lime;
 }
-.pedistals {
-  grid-area: pedistals;
+.pastGames {
+  grid-area: pastGames;
   background-color: teal;
 }
