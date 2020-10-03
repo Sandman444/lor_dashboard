@@ -1,1 +1,2 @@
-Connect to Riot's LoR Data Dragon API
+Remake app as a ranked progress and deck success tracker
+(Riot's current API's can't be used to make old design0)

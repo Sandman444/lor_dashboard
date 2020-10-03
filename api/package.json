@@ -1,0 +1,26 @@
+{
+  "name": "lor_dashboard",
+  "version": "1.0.0",
+  "description": "Info screens for Riot's Legends of Runeterra card game",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sandman444/lor_dashboard.git"
+  },
+  "author": "Alexander Wilson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sandman444/lor_dashboard/issues"
+  },
+  "homepage": "https://github.com/Sandman444/lor_dashboard#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.5",
+    "nodemon": "^2.0.4"
+  }
+}
