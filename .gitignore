@@ -24,5 +24,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/client/api/config.js
-/api/mongoDB/default.json
+/client/src/config.json
+/server/config.json
+/server/db/default.json
