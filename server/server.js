@@ -2,7 +2,7 @@ const express = require('express');
 const connectDB = require('./db');
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 //Connect to mongoDB
 connectDB();
@@ -11,9 +11,7 @@ connectDB();
 app.use(express.json({ extended: false }));
 
 //Define Routes
-app.get('/', (req, res) => {
-  res.send('Hello World');
-});
+app.use('/api/matches', require('./routes/api/matches'));
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
