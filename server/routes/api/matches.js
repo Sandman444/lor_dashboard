@@ -33,7 +33,7 @@ router.get('/riot', async (req, res) => {
       riotApiOptions
     );
     console.log(matchesRiot.status);
-    //compare to the last twenty matches saved in database
+    //find new matches 
     let newMatches = [];
     if (!lastMatch) {
       newMatches = matchesRiot.data;
@@ -41,17 +41,22 @@ router.get('/riot', async (req, res) => {
     } else {
       for (let i = 0; i < matchesRiot.data.length - 1; i++) {
         if (matchesRiot.data[i] === lastMatch) {
-          console.log('up to date');
           break;
         } else {
-          console.log('match missing');
+          newMatches.push(matchesRiot.data[i]);
         }
       }
     }
     //Fetch match data from LOR-MATCH-V1 for each missing game
+    newMatches.forEach(matchId => {
+      const matchesRiot = await axios.get(
+        `${API_PATH}/lor/match/v1/matches/${matchId}`,
+        riotApiOptions
+      );
+    });
     //add new match data to database
     //send sucess message
-    res.send(lastMatch);
+    res.send(newMatches);
   } catch (err) {
     res.status(err.response.status).send(err.message);
   }
