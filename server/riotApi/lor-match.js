@@ -16,7 +16,21 @@ const fetchMatches = () => {
 };
 
 const fetchMatch = (matchId) => {
-  return axios.get(`/lor/match/v1/matches/${matchId}`, riotApiOptions);
+  return axios.get(
+    `${API_PATH}/lor/match/v1/matches/${matchId}`,
+    riotApiOptions
+  );
 };
 
-module.exports = { fetchMatches, fetchMatch };
+const fetchRankedMatch = (matchId) => {
+  fetchMatch(matchId)
+    .then((matchData) => {
+      console.log(matchData.data);
+      return matchData;
+    })
+    .catch((err) => {
+      return Promise.reject(err);
+    });
+};
+
+module.exports = { fetchMatches, fetchMatch, fetchRankedMatch };
